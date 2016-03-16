@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"> 
     <head>
-        <title>Test fireworks</title>
+        <title>Test particle system</title>
         <meta name="google" value="notranslate" />         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="description" content="Performance test"/>
-		<meta name="Copyright" content=""/> 
-		<meta name="Developer" content="Armen Sirekanyan"/>
+		<meta name="Copyright" content="(C) Armen Sirekanyan"/> 
+		<meta name="Developer" content="Armen Sirekanyan, mail:armen.developer@gmail.com"/>
         <style type="text/css" media="screen"> 
             html, body  { height:100%; }
             body { margin:0; padding:0; overflow:auto; text-align:center; background-color: #aaaaaa; }   
@@ -16,23 +16,23 @@
             
         <script type="text/javascript" src="assets/js/swfobject.js"></script>
         <script type="text/javascript">
-            var swfVersionStr = "11.4.0";
+            var swfVersionStr = "";
             var xiSwfUrlStr = "";
             var flashvars = {};
 				flashvars.url = "assets/";
-				flashvars.swf = "Fire.swf";
+				flashvars.swf = "PSystem.swf";
             var params = {};
 				params.quality = "high";
 				params.wmode = "gpu";
 				params.bgcolor = "#222222";
 				params.allowscriptaccess = "sameDomain";
-				params.allowfullscreen = "true";
+				params.allowfullscreen = "false";
             var attributes = {};
-				attributes.id = "FLoader";
-				attributes.name = "FLoader";
+				attributes.id = "PSLoader";
+				attributes.name = "PSLoader";
 				attributes.align = "middle";
             swfobject.embedSWF(
-                "FLoader.swf", "flashContent", 
+                "PSLoader.swf", "flashContent", 
                 "800", "600", 
                 swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
@@ -42,8 +42,7 @@
     <body>
          <div id="flashContent">
             <p>
-                To view this page ensure that Adobe Flash Player version 
-                11.4.0 or greater is installed. 
+                Adobe Flash Player 11.4.0 or greater is needed.  
             </p>
             <script type="text/javascript"> 
                 var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://"); 
@@ -53,15 +52,15 @@
         </div>
         
         <noscript>
-            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="800" height="600" id="FLoader">
-                <param name="movie" value="FLoader.swf" />
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="800" height="600" id="PSLoader">
+                <param name="movie" value="PSLoader.swf" />
                 <param name="quality" value="high" />
 				<param name="wmode" value="gpu" />
                 <param name="bgcolor" value="#222222" />
                 <param name="allowScriptAccess" value="sameDomain" />
                 <param name="allowFullScreen" value="true" />
-				<param name='flashVars' value='&amp;url=assets/&amp;swf=Fire.swf'/>
-                <object type="application/x-shockwave-flash" data="FLoader.swf" width="800" height="600">
+				<param name='flashVars' value='&amp;url=assets/&amp;swf=PSystem.swf'/>
+                <object type="application/x-shockwave-flash" data="PSLoader.swf" width="800" height="600">
                     <param name="quality" value="high" />
                     <param name="bgcolor" value="#222222" />
                     <param name="allowScriptAccess" value="sameDomain" />
