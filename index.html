@@ -1,75 +1,54 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"> 
-    <head>
-        <title>Test particle system</title>
-        <meta name="google" value="notranslate" />         
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="description" content="Performance test"/>
-		<meta name="Copyright" content="(C) Armen Sirekanyan"/> 
-		<meta name="Developer" content="Armen Sirekanyan, mail:armen.developer@gmail.com"/>
-        <style type="text/css" media="screen"> 
-            html, body  { height:100%; }
-            body { margin:0; padding:0; overflow:auto; text-align:center; background-color: #aaaaaa; }   
-            object:focus { outline:none; }
-            #flashContent { display:none; }
-        </style>
-            
-        <script type="text/javascript" src="assets/js/swfobject.js"></script>
-        <script type="text/javascript">
-            var swfVersionStr = "";
-            var xiSwfUrlStr = "";
-            var flashvars = {};
-				flashvars.url = "assets/";
-				flashvars.swf = "PSystem.swf";
-            var params = {};
-				params.quality = "high";
-				params.wmode = "gpu";
-				params.bgcolor = "#222222";
-				params.allowscriptaccess = "sameDomain";
-				params.allowfullscreen = "false";
-            var attributes = {};
-				attributes.id = "PSLoader";
-				attributes.name = "PSLoader";
-				attributes.align = "middle";
-            swfobject.embedSWF(
-                "PSLoader.swf", "flashContent", 
-                "800", "600", 
-                swfVersionStr, xiSwfUrlStr, 
-                flashvars, params, attributes);
-            swfobject.createCSS("#flashContent", "display:block;text-align:left;");
-        </script>
-    </head>
-    <body>
-         <div id="flashContent">
-            <p>
-                Adobe Flash Player 11.4.0 or greater is needed.  
-            </p>
-            <script type="text/javascript"> 
-                var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://"); 
-                document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='" 
-                                + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" ); 
-            </script> 
-        </div>
-        
-        <noscript>
-            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="800" height="600" id="PSLoader">
-                <param name="movie" value="PSLoader.swf" />
-                <param name="quality" value="high" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+	<head>
+		<title>Test particle system</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta name="description" content="Experiments with dinamic particle system & performance test"/>
+		<meta name="Developer" content="armen.developer@gmail.com"/>
+		<style type="text/css" media="screen">
+		html, body { height:100%; background-color: #dddddd;}
+		body { margin:5; padding:10; overflow:hidden; }
+		#flashContent { width:100%; height:100%; }
+		</style>
+	</head>
+	<body>
+		<div id="flashContent">
+			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="800" height="600" id="PSLoader" align="top">
+				<param name="movie" value="PSLoader.swf" />
+				<param name="quality" value="best" />
+				<param name="bgcolor" value="#222222" />
+				<param name="play" value="true" />
+				<param name="loop" value="true" />
 				<param name="wmode" value="gpu" />
-                <param name="bgcolor" value="#222222" />
-                <param name="allowScriptAccess" value="sameDomain" />
-                <param name="allowFullScreen" value="true" />
-				<param name='flashVars' value='&amp;url=assets/&amp;swf=PSystem.swf'/>
-                <object type="application/x-shockwave-flash" data="PSLoader.swf" width="800" height="600">
-                    <param name="quality" value="high" />
-                    <param name="bgcolor" value="#222222" />
-                    <param name="allowScriptAccess" value="sameDomain" />
-                    <param name="allowFullScreen" value="false" />
-                      <a href="http://www.adobe.com/go/getflashplayer">
-                        <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash Player" />
-                    </a>
-                </object>
-            </object>
-        </noscript>     
-   </body>
+				<param name="scale" value="showall" />
+				<param name="menu" value="false" />
+				<param name="devicefont" value="false" />
+				<param name="salign" value="" />
+				<param name='flashVars' value='swf=PSystem.swf'/>
+				<param name="allowScriptAccess" value="sameDomain" />
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="PSLoader.swf" width="800" height="600">
+					<param name="movie" value="PSLoader.swf" />
+					<param name="quality" value="best" />
+					<param name="bgcolor" value="#222222" />
+					<param name="play" value="true" />
+					<param name="loop" value="true" />
+					<param name="wmode" value="gpu" />
+					<param name="scale" value="showall" />
+					<param name="menu" value="false" />
+					<param name="devicefont" value="false" />
+					<param name="salign" value="" />
+					<param name='flashVars' value='swf=PSystem.swf'/>
+					<param name="allowScriptAccess" value="sameDomain" />
+				<!--<![endif]-->
+					<a href="http://www.adobe.com/go/getflash">
+						<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Загрузить Adobe Flash Player" />
+					</a>
+				<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+			</object>
+		</div>
+	</body>
 </html>
